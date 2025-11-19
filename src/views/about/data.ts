@@ -49,26 +49,26 @@ export const skills = [
 export const career = [
   {
     step: 1,
-    title: "2021.09.13 - 2022.05.23",
+    title: "2021.09.13 - 2022.05.17",
     description: "华大生命科学研究院 - 国家基因库：实验室安全管理（实习）",
     state: "completed",
   },
   {
     step: 2,
     title: "2022.06.08 - 2023.12.31",
-    description: "广州序源医学科技有限公司：生物信息助理工程师（全职）",
+    description: "广州序源医学科技有限公司：生物信息助理工程师",
     state: "completed",
   },
   {
     step: 3,
     title: "2024.01.01 - 至今",
-    description: "广州序源医学科技有限公司：生物信息分析工程师（全职）",
+    description: "广州序源医学科技有限公司：生物信息分析工程师",
     state: "active",
   },
   {
     step: 4,
     title: "未来1-2年",
-    description: "当前方向：生物信息分析/Python全栈开发（全职）",
+    description: "当前方向：生物信息分析/Python全栈开发",
     state: "inactive",
   },
 ];
