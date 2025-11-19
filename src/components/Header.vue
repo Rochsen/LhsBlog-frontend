@@ -51,10 +51,10 @@ const navList: { title: string; href: string }[] = [
     title: "关于",
     href: "/about",
   },
-  {
-    title: "管理",
-    href: "/manage",
-  },
+  // {
+  //   title: "管理",
+  //   href: "/manage",
+  // },
 ];
 
 // 判断当前路由是否激活
