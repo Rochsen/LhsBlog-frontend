@@ -4,11 +4,33 @@
     <div class="flex items-center justify-center md:block">
       <NavigationMenu>
         <NavigationMenuList class="space-x-4">
+          <!-- 单级菜单 -->
           <NavigationMenuItem v-for="item in navList" :key="item.href">
             <NavigationMenuLink :href="item.href" :class="[
                 'text-lg py-2 rounded-b-none text-gray-600 hover:text-gray-900 transition-colors hover:bg-gray-0',
                 isRouteActive(item.href) ? 'font-bold border-b-2 border-blue-500' : ''
               ]">{{ item.title }}</NavigationMenuLink>
+          </NavigationMenuItem>
+          <!-- 多级菜单 - 我的应用 -->
+          <NavigationMenuItem>
+            <NavigationMenuTrigger :class="[
+              'text-lg py-2 px-2 rounded-b-none text-gray-600 hover:text-gray-900 transition-colors hover:bg-gray-0',
+            ]">应用</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul class="w-[100px] gap-3 md:w-[200px] lg:w-[150px] ">
+                <li v-for="component in apps" :key="component.title">
+                  <NavigationMenuLink as-child>
+                    <a :href="component.href"
+                      class="block select-none space-y-1 rounded-md p-1 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      <div :class="isRouteActive(component.href) ? 'font-bold border-b-2 border-blue-500' : ''">{{ component.title }}</div>
+                      <!-- <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        {{ component.description }}
+                      </p> -->
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+              </ul>
+            </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
@@ -27,14 +49,21 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/Button";
 import { useRoute } from 'vue-router';
-import { computed } from 'vue';
 
 const route = useRoute();
 
+
+// 菜单项数据类型
+interface MenuItemType {
+  title: string;
+  href: string;
+  description?: string;
+}
+
+
 /** 导航菜单列表 */
-const navList: { title: string; href: string }[] = [
+const navList: MenuItemType[] = [
   {
     title: "首页",
     href: "/",
@@ -56,6 +85,18 @@ const navList: { title: string; href: string }[] = [
   //   href: "/manage",
   // },
 ];
+
+
+// 应用菜单
+const apps: MenuItemType[] = [
+  {
+    title: "数据管理CRUD",
+    href: "/apps/dataMng",
+    // description:
+    //   "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+]
+
 
 // 判断当前路由是否激活
 const isRouteActive = (href: string) => {

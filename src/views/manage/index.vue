@@ -1,7 +1,5 @@
 <template>
-    <div class="min-h-screen">
-        <div class="flex items-center justify-center">这是管理</div>
-    </div>
+    <div class="flex items-center justify-center">这是管理</div>
 </template>
 
 <script setup lang="ts">

@@ -1,7 +1,7 @@
 <template>
     <div id="top" class="pt-15">
         <Header></Header>
-        <router-view></router-view>
+        <router-view class="min-h-screen"></router-view>
         <Bottom></Bottom>
 
         <!-- 返回顶部 -->

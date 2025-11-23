@@ -1,13 +1,16 @@
 <template>
     <div class="w-full mt-0 pt-0 select-none">
-        这是文章
+        这是
     </div>
 </template>
 
 <script setup lang="ts">
 
-defineOptions({ name: 'Article' })
+defineOptions({ name: 'dataMng' })
+
 
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

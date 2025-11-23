@@ -4,6 +4,7 @@ import Article from '@/views/article/index.vue';
 import Archive from '@/views/archive/index.vue';
 import About from '@/views/about/index.vue';
 import Manage from '@/views/manage/index.vue';
+import dataMng from '@/views/apps/dataMng/index.vue';
 
 
 const router = createRouter({
@@ -33,6 +34,11 @@ const router = createRouter({
       path: "/manage",
       name: "manage",
       component: Manage,
+    },
+    {
+      path: "/apps/dataMng",
+      name: "dataMng",
+      component: dataMng,
     },
   ],
 });

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full mt-0 pt-0 select-none min-h-screen">
+  <div class="w-full mt-0 pt-0 select-none">
     <!-- 修改头像容器结构 -->
     <div class="flex items-center justify-center h-60 relative mt-5 w-full">
       <!-- 将 Ripple 放在头像后面 -->

@@ -1,8 +1,6 @@
 <template>
-    <div class="min-h-screen">
-        <div class="flex items-center justify-center">
-            这是归档
-        </div>
+    <div class="w-full mt-0 pt-0 select-none">
+        这是归档
     </div>
 </template>
 
